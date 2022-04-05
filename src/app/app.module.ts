@@ -4,21 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing/app-routing.module';
-import { ViewsComponent } from './views/views.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrosModule } from './erros/erros.module';
+import {AccordionModule} from 'primeng/accordion';
+import { EmailModule } from './views/email/email.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewsComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     HttpClientModule,
     AppRoutingModule,
+    ErrosModule,
+    AccordionModule,
+    EmailModule,
+    FormsModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
