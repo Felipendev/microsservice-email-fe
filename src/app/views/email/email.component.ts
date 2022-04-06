@@ -31,8 +31,8 @@ export class EmailComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = this.fb.group({
-      ownerRef: ["Felipe"],
-      emailFrom: ["felipehenrique.pds@gmail.com"],
+      ownerRef: ["Desenvolvedor JAVA"],
+      emailFrom: ["dev.especialista.java@gmail.com"],
       emailTo: [null, [this.validarObrigatoriedade]],
       subject: [null, [this.validarObrigatoriedade]],
       text: [null, [this.validarObrigatoriedade]]
