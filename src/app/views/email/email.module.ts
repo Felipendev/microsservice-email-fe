@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EmailComponent } from './email.component';
 import {EditorModule} from 'primeng/editor';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -15,7 +18,12 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     EditorModule,
-    FormsModule 
-  ]
+    FormsModule,
+    ReactiveFormsModule,
+    ConfirmDialogModule,
+    ToastModule,
+    BrowserAnimationsModule
+  ],
+  exports: [EmailComponent]
 })
 export class EmailModule { }

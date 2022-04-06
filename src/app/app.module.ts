@@ -8,7 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrosModule } from './erros/erros.module';
 import {AccordionModule} from 'primeng/accordion';
 import { EmailModule } from './views/email/email.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +28,21 @@ import { FormsModule } from '@angular/forms';
     ErrosModule,
     AccordionModule,
     EmailModule,
-    FormsModule 
+    FormsModule,
+    ReactiveFormsModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

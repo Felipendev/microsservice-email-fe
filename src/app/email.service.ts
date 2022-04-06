@@ -2,6 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Email } from './shared/email.model';
+import { take } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +22,7 @@ export class EmailService {
     private http: HttpClient
   ) { }
 
-  sendEmail(email: Email){
-    return this.http.post<Email>(this.API, email, this.httpOptions);
+  public sendEmail(email: Email): Observable<Email>{
+    return this.http.post<Email>(this.API + "/sending-email", email, this.httpOptions).pipe(take(1));
   }
 }

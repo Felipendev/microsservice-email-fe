@@ -12,6 +12,10 @@ const routes: Routes = [
     component: EmailComponent
   },
   {
+    path: 'home',
+    component: EmailComponent
+  },
+  {
     path: 'not-found',
     component: NotFoundComponent,
     data: {
