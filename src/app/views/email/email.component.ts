@@ -44,8 +44,8 @@ export class EmailComponent implements OnInit {
       console.log("Email enviado com sucesso!")
       this.messageService.add({ severity: 'success', summary: 'Tudo certo!', detail: 'Email enviado com sucesso!' });
       setTimeout(function () {
-        window.location.href = "/home";
-      }, 500);
+        window.location.reload();;
+      }, 1000);
     },
       error => {
         console.log("Falha ao enviar email!")
